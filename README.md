@@ -1,9 +1,7 @@
 # Pickhacks2023
 
-Description: We record an audio from the environment and enter a prompt. Both these inputs are fed to a generative AI model which generates a new audio clip. The audio clip is then played back to the user.
-
-The audio clip can be saved to the user's device.
+Description: Our app is meant for explorers who want to keep track of the nature they see. It uses AI to identify various species of plants and animals and then allows the user to add them to their collection. The user can then view their collection and see the different species they have seen.
 
 ## Inspiration
 
-We were inspired by the idea of using AI to generate new content. We wanted to explore the idea of using AI to generate new audio clips.
+We were inspired by the fact that many people are interested in nature but don't know what they are looking at. We wanted to create an app that would allow people to explore and learn about the nature around them. It would also act as a reward system for people who are interested in nature.
