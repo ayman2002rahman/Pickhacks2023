@@ -28,7 +28,11 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupAVCapture()
+        let leftSwipe = UISwipeGestureRecognizer(target: self, action: #selector(swipeAction(swipe:)))
+        leftSwipe.direction = UISwipeGestureRecognizer.Direction.left
+        self.view.addGestureRecognizer(leftSwipe)
     }
     
     override func didReceiveMemoryWarning() {
@@ -120,3 +124,17 @@ class ViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDele
     }
 }
 
+extension UIViewController {
+    
+    @objc func swipeAction(swipe: UISwipeGestureRecognizer) {
+        
+        switch swipe.direction.rawValue {
+        case 1:
+            performSegue(withIdentifier: "goLeft", sender: self)
+        case 2:
+            performSegue(withIdentifier: "goRight", sender: self)
+        default:
+            break
+        }
+    }
+}
